@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Amarillo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #000000;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #game-container {
+      width: 100vw;
+      height: 100dvh;
+      max-width: 600px;
+      position: relative
+    }
+    #game {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
 
+  <!-- Contenedor donde se dibuja el emulador -->
+  <div id="game-container">
+    <div id="game"></div>
+  </div>
+
+  <!-- Configuración de EmulatorJS -->
+  <script>
+    // 1. Dónde se montará el juego
+    EJS_player = '#game';
+
+    // 2. Consola que emula:
+    // Usa 'nes' para Nintendo NES o 'gb' para Game Boy clásica
+    EJS_core = 'gb'; 
+
+    // 3. Nombre EXACTO del archivo ROM que subiste a GitHub
+    EJS_gameUrl = 'Pokémon Amarillo.gbc'; 
+
+    // 4. Servidor que carga el motor del emulador
+    EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+    EJS_startOnloaded = true;
+  </script>
+
+  <!-- Script que arranca el emulador -->
+  <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+
+</body>
+</html>
